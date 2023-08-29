@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush04.c                                           :+:      :+:    :+:   */
+/*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wonyocho <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jinyokim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 16:44:40 by wonyocho          #+#    #+#             */
-/*   Updated: 2023/08/27 15:52:52 by jinyokim         ###   ########.fr       */
+/*   Created: 2023/08/27 13:41:57 by jinyokim          #+#    #+#             */
+/*   Updated: 2023/08/27 15:26:05 by jinyokim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 extern void	ft_putchar(char c);
 
 void	lines(int x, int y, int width, int length)
 {
-	if (width == x && length == y)
+	if ((width == 1 && length == 1) || (width == x && length == y))
 	{
-		ft_putchar('A');
+		ft_putchar('o');
 	}
 	else if ((width == 1 && length == y) || (width == x && length == 1))
 	{
-		ft_putchar('C');
+		ft_putchar('o');
 	}
-	else if (width == 1 && length == 1)
+	else if ((length == y) || (length == 1))
 	{
-		ft_putchar('A');
+		ft_putchar('-');
 	}
-	else if (length == y || length == 1 || width == x || width == 1)
+	else if (width == 1 || width == x || length == 1 || length == y)
 	{
-		ft_putchar('B');
+		ft_putchar('|');
 	}
 	else
 	{
