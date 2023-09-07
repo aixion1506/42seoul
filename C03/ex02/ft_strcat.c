@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:55:01 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/07 15:55:43 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/07 15:53:04 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/07 15:53:54 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
-	return (s1[i] - s2[i]);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}	
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
-int	main()
-{
-	printf("%d", ft_strcmp("Hello", "Hello1"));
-	printf("\n%d", ft_strcmp("Hello", "He"));
-	printf("\n%d", ft_strcmp("He", "Hello"));
-	printf("\n%d", ft_strcmp("Hello", "Hello"));
+int main() {
+    char src[] = "abcde";
+    char dest[] = "12345 ";
+
+    printf("%s", ft_strcat(dest, src));
+
+    return 0;
 }
 */

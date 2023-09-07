@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:55:01 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/07 15:55:43 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/07 15:57:48 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/07 15:58:38 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	j = 0;
+	if (to_find[j] == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i);
 		i++;
-	return (s1[i] - s2[i]);
+		j = 0;
+	}
+	return (0);
 }
 /*
 #include <stdio.h>
-int	main()
+int main()
 {
-	printf("%d", ft_strcmp("Hello", "Hello1"));
-	printf("\n%d", ft_strcmp("Hello", "He"));
-	printf("\n%d", ft_strcmp("He", "Hello"));
-	printf("\n%d", ft_strcmp("Hello", "Hello"));
+    char str[] = "123 abc 456 def";
+    char find[] = "abc";
+
+    printf("%s", ft_strstr(str, find));
+
+    return 0;
 }
 */
