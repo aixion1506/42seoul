@@ -1,20 +1,30 @@
-int ft_str_is_uppercase(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 16:09:35 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/07 16:10:31 by sunghwpa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_str_is_uppercase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	// 루프가 `null`이 아닌 곳에서만 실행
 	while (str[i] != '\0')
 	{
-		// 대문자 알파벳인지 확인
 		if (str[i] >= 'A' && str[i] <= 'Z')
-			i++; // 알파벳이면 i를 1증가후 재실행
+			i++;
 		else
-			return (0); // 알파벳이 아니라면 함수는 0반환
+			return (0);
 	}
-	return (1);  // 알파벳만 있을시에 함수는 1반환
+	return (1);
 }
-
+/*
 #include <stdio.h>
 int	main()
  {
@@ -22,3 +32,4 @@ int	main()
 	printf("\n%d", ft_str_is_uppercase("ABCDE"));
 	printf("\n%d", ft_str_is_uppercase("ABCD1"));
 }
+*/

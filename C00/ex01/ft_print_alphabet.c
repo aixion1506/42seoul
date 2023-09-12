@@ -6,10 +6,9 @@
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 19:54:33 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/08/24 20:01:31 by sunghwpa         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:00:47 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_print_alphabet(void)
@@ -23,9 +22,10 @@ void	ft_print_alphabet(void)
 		a++;
 	}
 }
-
-int	main(void)
+/*
+int	main()
 {
 	ft_print_alphabet();
-	return (0);
+	return 0;
 }
+*/

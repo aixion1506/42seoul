@@ -5,23 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/30 18:33:32 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/08/30 19:05:43 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/07 16:19:11 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/10 20:55:33 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-/*
-#include <stdio.h>
-int	main()
-{
-	int	*nbr;
-	int	number;
-
-	nbr = &number;
-	ft_ft(nbr);
-	printf("%d", number);
-}
-*/

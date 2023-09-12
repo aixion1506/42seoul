@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 16:08:32 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/07 16:09:10 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/07 16:23:32 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/11 17:08:15 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+//#include <stdio.h>
+
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	i;
+	int	j;
+	int	tmp;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = size - 1;
+	while (i < size / 2)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			i++;
-		else
-			return (0);
+		tmp = tab[i];
+		tab[i] = tab[j - i];
+		tab[j - i] = tmp;
+		i++;
 	}
-	return (1);
 }
 /*
-#include <stdio.h>
-int	main()
- {
-	printf("%d", ft_str_is_lowercase("abcde"));
-	printf("\n%d", ft_str_is_lowercase("abcd1"));
-	printf("\n%d", ft_str_is_lowercase("12345"));
+int	main(void)
+{
+	int tab[6] = {1, 2, 3, 4, 5, 6};
+	int size;
+
+	size = 6;
+
+	ft_rev_int_tab(tab, size);
+	printf("%d, %d, %d, %d, %d, %d",
+			tab[0], tab[1], tab[2], tab[3], tab[4], tab[5]);
 }
 */

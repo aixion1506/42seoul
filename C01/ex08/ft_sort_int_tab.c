@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 16:26:28 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/07 16:27:54 by sunghwpa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int tmp;
+	int	i;
+	int	tmp;
 
 	i = 0;
 	while (i < size - 1)
@@ -17,8 +29,7 @@ void	ft_sort_int_tab(int *tab, int size)
 			i++;
 	}
 }
-
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -30,3 +41,4 @@ int	main()
 	printf("%d, %d, %d, %d, %d", tab[0], tab[1], tab[2], tab[3], tab[4]);
 	return 0;
 }
+*/

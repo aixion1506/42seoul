@@ -6,7 +6,7 @@
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 21:00:51 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/08/24 21:06:23 by sunghwpa         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:59:43 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ void	ft_print_reverse_alphabet(void)
 		z--;
 	}
 }
-
-int	main(void)
+/*
+int	main()
 {
 	ft_print_reverse_alphabet();
-	return (0);
+	return 0;
 }
+*/

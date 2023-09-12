@@ -6,12 +6,13 @@
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:12:51 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/07 17:20:59 by sunghwpa         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:56:25 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	int	i;
 
@@ -22,10 +23,11 @@ void ft_putstr(char *str)
 		i++;
 	}
 }
-
-int	main()
+/*
+int	main(void)
 {
 	char	*src = "HellO";
 	ft_putstr(src);
 	return (0);
 }
+*/

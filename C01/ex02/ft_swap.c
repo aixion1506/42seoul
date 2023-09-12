@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 16:08:32 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/07 16:09:10 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/07 16:20:07 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/10 20:55:55 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	tmp;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 /*
 #include <stdio.h>
-int	main()
- {
-	printf("%d", ft_str_is_lowercase("abcde"));
-	printf("\n%d", ft_str_is_lowercase("abcd1"));
-	printf("\n%d", ft_str_is_lowercase("12345"));
+int main()
+{
+	int c;
+	int d;
+
+	c = 4;
+	d = 8;
+
+	ft_swap(&c, &d);
+	printf("c = %d, d = %d", c, d);
+	return 0;	
 }
 */

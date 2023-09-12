@@ -6,17 +6,16 @@
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 16:32:52 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/08/24 16:44:37 by sunghwpa         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:00:30 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
+/*
 int	main(void)
 {
 	char	c;
@@ -25,3 +24,4 @@ int	main(void)
 	ft_putchar(c);
 	return (0);
 }
+*/

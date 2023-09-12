@@ -1,4 +1,17 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/10 21:13:08 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/12 16:57:18 by sunghwpa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <stdio.h>
+
 int	checkerror(char *str)
 {
 	int	i;
@@ -9,7 +22,7 @@ int	checkerror(char *str)
 		return (0);
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 32 || str[i] == 127 || str[i] == 43 || str[i] == 45)
+		if (str[i] <= 32 || str[i] >= 127)
 			return (0);
 		j = i + 1;
 		while (str[j] != '\0')
@@ -25,7 +38,7 @@ int	checkerror(char *str)
 
 int	nb_base(char str, char *base)
 {
-	int nb;
+	int	nb;
 
 	nb = 0;
 	while (base[nb] != '\0')
@@ -56,13 +69,13 @@ int	whitespaces(char *str, int *ptr_i)
 	return (count);
 }
 
-int		ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
-	int		i;
-	int		negative;
-	int		nb;
-	int		nb2;
-	int		begin_len;
+	int	i;
+	int	negative;
+	int	nb;
+	int	nb2;
+	int	begin_len;
 
 	nb = 0;
 	i = 0;
@@ -81,10 +94,12 @@ int		ft_atoi_base(char *str, char *base)
 	}
 	return (0);
 }
-
-int		main(void)
+/*
+int	main(void)
 {
 	printf("%d\n", ft_atoi_base("	+++++--133742", "0123456789"));
 	printf("%d\n", ft_atoi_base("	     ---101010", "01"));
 	printf("%d\n", ft_atoi_base(" 	+---539", "0123456789abcdef"));
+	printf("%d\n", ft_atoi_base("	++---133742", "01234567"));
 }
+*/
