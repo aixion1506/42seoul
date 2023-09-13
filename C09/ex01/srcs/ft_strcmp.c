@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunghwpa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:00:12 by sunghwpa          #+#    #+#             */
-/*   Updated: 2023/09/13 17:47:46 by sunghwpa         ###   ########.fr       */
+/*   Created: 2023/09/13 22:19:09 by sunghwpa          #+#    #+#             */
+/*   Updated: 2023/09/13 22:19:12 by sunghwpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-}
-
-int	main(int ac, char	**av)
-{
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	if (ac >= 1)
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 	{
-		while (av[0][i] != '\0')
-		{
-			ft_putchar(av[0][i]);
-			i++;
-		}
-		ft_putchar('\n');
+		i++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }
